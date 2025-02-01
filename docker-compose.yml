@@ -1,0 +1,15 @@
+
+services:
+  sender:
+    build:
+      context: .
+    env_file: ".env"
+    command: [ "python3", "main.py", "sender" ]
+    restart: always
+
+  recver:
+    build:
+      context: .
+    env_file: ".env"
+    command: [ "python3", "main.py", "recver" ]
+    restart: always
